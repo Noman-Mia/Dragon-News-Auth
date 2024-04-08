@@ -4,8 +4,8 @@ const Header = () => {
     return (
         <div>
             <img className="mx-auto" src={logo} alt="" />
-            <p className="text-center">Journalism Without Fear or Favour</p>
-            <p className="text-xl text-center">{moment().format("dddd, MMMM, D ,YYYY")}</p>
+            <p className="text-center mt-3">Journalism Without Fear or Favour</p>
+            <p className="text-xl text-center mt-3 mb-3">{moment().format("dddd, MMMM, D ,YYYY")}</p>
         </div>
     );
 };
