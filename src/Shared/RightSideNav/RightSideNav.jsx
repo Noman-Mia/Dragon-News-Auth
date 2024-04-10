@@ -44,6 +44,6 @@ const RightSideNav = () => {
       </div>
     </div>
   );
-};
+}; 
 
 export default RightSideNav;
