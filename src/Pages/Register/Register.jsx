@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { useContext } from "react";
-import { AuthContext } from "../../Providers/authProvider";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext); 
-    const handleRegister = (e)=>{
+   const {createUser} = useContext(AuthContext)
+
+    const handleRegister = e =>{
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const name = form.get ('name')
@@ -14,12 +15,14 @@ const Register = () => {
         const password = form.get ('password')
         console.log(name, photo, email, password);
 
-        //create-tuser
+        // create-user
         createUser(email,password)
         .then(result =>{
-            console.log(result.user);
+            console.log(result.user)
         })
-        .catch(error =>console.error(error))
+        .catch(error =>{
+            console.errro(error)
+        })
     }
     return (
         <div className="mt-6">
@@ -56,10 +59,10 @@ const Register = () => {
       </label>
     </div>
     <div className="form-control mt-6">
-      <button className="btn btn-primary">Login</button>
+      <button className="btn btn-primary">Register</button>
     </div>
   </form>
-  <p className="text-center text-xl mb-5">Already have any account <Link to="/login" className="text-blue-400 font-bold">Register</Link></p>
+  <p className="text-center text-xl mb-5">Already have any account <Link to="/login" className="text-blue-400 font-bold">Login</Link></p>
 </div>
 </div>
 </div>
