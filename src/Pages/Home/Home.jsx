@@ -6,7 +6,7 @@ import BreakingNews from "./BreakingNews";
 import {useLoaderData} from "react-router-dom"
 import NewsCard from "./NewsCard";
 
-const Home = () => {
+const Home = () => {    
    const news = useLoaderData();
    console.log(news);
     return (
